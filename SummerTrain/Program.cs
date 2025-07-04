@@ -1,22 +1,90 @@
-﻿//                                 practice 2
+﻿//                                practice 3
+
+using SummerTrain;
 
 string name;
 string surname;
-int age;
-string address;
+DateTime age;
+string gender;
+string email;
+int id;
 
-Console.WriteLine("What's your name?");
+Console.WriteLine("Enter your Id");
+id = int.Parse(Console.ReadLine());
+Console.Clear();
+if (id < 0)
+{
+    Console.WriteLine("Id cannot be negative.");
+    return;
+}
+  
+
+Console.WriteLine("Enter your name");
 name = Console.ReadLine();
-Console.WriteLine("What's your surname?");
-surname = Console.ReadLine();
-Console.WriteLine("How old are you?");
-age = int.Parse(Console.ReadLine());
-Console.WriteLine("Where do you live?");
-address = Console.ReadLine();
-
 Console.Clear();
 
-Console.WriteLine($"Your name is {name} {surname}, you are {age} years old and you live in {address}.");
+Console.WriteLine("Enter your surname");
+surname = Console.ReadLine();
+Console.Clear();
+
+Console.WriteLine("Enter your age (YYYY-MM-DD)");
+age = DateTime.Parse(Console.ReadLine());
+Console.Clear();
+
+Console.WriteLine(
+    $"Enter yor Gender: Male or Female"
+    );
+gender = Console.ReadLine().ToLower();
+Console.Clear();
+if (gender != "female" || gender != "male")
+{
+    Console.WriteLine("Error");
+}
+
+
+else { 
+
+    Console.WriteLine("Enter your email");
+email = Console.ReadLine();
+Console.Clear();
+
+Person person = new Person(id, name, surname, age, gender, email);
+
+person.PrintInfo();
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//                                 practice 2
+
+//string name;
+//string surname;
+//int age;
+//string address;
+
+//Console.WriteLine("What's your name?");
+//name = Console.ReadLine();
+//Console.WriteLine("What's your surname?");
+//surname = Console.ReadLine();
+//Console.WriteLine("How old are you?");
+//age = int.Parse(Console.ReadLine());
+//Console.WriteLine("Where do you live?");
+//address = Console.ReadLine();
+
+//Console.Clear();
+
+//Console.WriteLine($"Your name is {name} {surname}, you are {age} years old and you live in {address}.");
 
 
 
