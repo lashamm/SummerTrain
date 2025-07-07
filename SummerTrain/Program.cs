@@ -1,57 +1,119 @@
-﻿//                                practice 3
+﻿//                              practice 4
 
-using SummerTrain;
 
-string name;
-string surname;
-DateTime age;
-string gender;
-string email;
-int id;
 
-Console.WriteLine("Enter your Id");
-id = int.Parse(Console.ReadLine());
+int num1;
+int num2;
+char operation;
+
+Console.WriteLine("Enter first number:");
+num1 = int.Parse(Console.ReadLine());
 Console.Clear();
-if (id < 0)
+
+Console.WriteLine("Enter second number:");
+num2 = int.Parse(Console.ReadLine());
+Console.Clear();
+
+Console.WriteLine("Enter operation (+, -, *, /):");
+operation = char.Parse(Console.ReadLine());
+Console.Clear();
+
+if (operation == '+')
 {
-    Console.WriteLine("Id cannot be negative.");
-    return;
+    int sum = num1 + num2;
+    Console.WriteLine($"{num1} + {num2} is {sum}");
 }
-  
-
-Console.WriteLine("Enter your name");
-name = Console.ReadLine();
-Console.Clear();
-
-Console.WriteLine("Enter your surname");
-surname = Console.ReadLine();
-Console.Clear();
-
-Console.WriteLine("Enter your age (YYYY-MM-DD)");
-age = DateTime.Parse(Console.ReadLine());
-Console.Clear();
-
-Console.WriteLine(
-    $"Enter yor Gender: Male or Female"
-    );
-gender = Console.ReadLine().ToLower();
-Console.Clear();
-if (gender != "female" || gender != "male")
+else if (operation == '-')
 {
-    Console.WriteLine("Error");
+    int difference = num1 - num2;
+    Console.WriteLine($"{num1} - {num2} is {difference}");
+}
+else if (operation == '*')
+{
+    int product = num1 * num2;
+    Console.WriteLine($"{num1} * {num2} is {product}");
+}
+else if (operation == '/')
+{
+    if (num2 != 0)
+    {
+        double quotient = (double)num1 / num2;
+        Console.WriteLine($"{num1} / {num2} is {quotient}");
+    }
+    else
+    {
+        Console.WriteLine("Cannot divide by zero.");
+    }
+}
+else
+{
+    Console.WriteLine("Invalid operation.");
 }
 
 
-else { 
 
-    Console.WriteLine("Enter your email");
-email = Console.ReadLine();
-Console.Clear();
 
-Person person = new Person(id, name, surname, age, gender, email);
 
-person.PrintInfo();
-};
+
+
+
+
+
+
+////                                practice 3
+
+//using SummerTrain;
+
+//string name;
+//string surname;
+//DateTime age;
+//string gender;
+//string email;
+//int id;
+
+//Console.WriteLine("Enter your Id");
+//id = int.Parse(Console.ReadLine());
+//Console.Clear();
+//if (id < 0)
+//{
+//    Console.WriteLine("Id cannot be negative.");
+//    return;
+//}
+
+
+//Console.WriteLine("Enter your name");
+//name = Console.ReadLine();
+//Console.Clear();
+
+//Console.WriteLine("Enter your surname");
+//surname = Console.ReadLine();
+//Console.Clear();
+
+//Console.WriteLine("Enter your age (YYYY-MM-DD)");
+//age = DateTime.Parse(Console.ReadLine());
+//Console.Clear();
+
+//Console.WriteLine(
+//    $"Enter yor Gender: Male or Female"
+//    );
+//gender = Console.ReadLine().ToLower();
+//Console.Clear();
+//if (gender != "female" || gender != "male")
+//{
+//    Console.WriteLine("Error");
+//}
+
+
+//else { 
+
+//    Console.WriteLine("Enter your email");
+//email = Console.ReadLine();
+//Console.Clear();
+
+//Person person = new Person(id, name, surname, age, gender, email);
+
+//person.PrintInfo();
+//};
 
 
 
