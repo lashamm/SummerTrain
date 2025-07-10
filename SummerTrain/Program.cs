@@ -1,54 +1,123 @@
-﻿//                              practice 4
+﻿//                               practice 5
 
+using SummerTrain;
 
+int id;
+string name;
+decimal deposit;
+decimal withdrawal;
+decimal balance;
 
-int num1;
-int num2;
-char operation;
+Console.WriteLine("Enter a starting balance");
+balance = decimal.Parse(Console.ReadLine());
+Console.Clear();
+if (balance < 0)
+{
+    Console.WriteLine("Balance cannot be negative.");
+    return;
+}
 
-Console.WriteLine("Enter first number:");
-num1 = int.Parse(Console.ReadLine());
+Console.WriteLine("Enter your Id:");
+id = int.Parse(Console.ReadLine());
+Console.Clear();
+if (id < 0)
+{
+    Console.WriteLine("Wrong Id.");
+    return;
+}
+
+Console.WriteLine("Enter your name:");
+name = Console.ReadLine();
 Console.Clear();
 
-Console.WriteLine("Enter second number:");
-num2 = int.Parse(Console.ReadLine());
+Console.WriteLine("Enter your deposit amount:");
+deposit = decimal.Parse(Console.ReadLine());
 Console.Clear();
+if (deposit < 0)
+{
+    Console.WriteLine("Deposit cannot be negative.");
+    return;
+}
 
-Console.WriteLine("Enter operation (+, -, *, /):");
-operation = char.Parse(Console.ReadLine());
+Console.WriteLine("Enter your withdrawal amount:");
+withdrawal = decimal.Parse(Console.ReadLine());
 Console.Clear();
+if (withdrawal < 0)
+{
+    Console.WriteLine("Withdrawal cannot be negative.");
+    return;
+}
 
-if (operation == '+')
-{
-    int sum = num1 + num2;
-    Console.WriteLine($"{num1} + {num2} is {sum}");
-}
-else if (operation == '-')
-{
-    int difference = num1 - num2;
-    Console.WriteLine($"{num1} - {num2} is {difference}");
-}
-else if (operation == '*')
-{
-    int product = num1 * num2;
-    Console.WriteLine($"{num1} * {num2} is {product}");
-}
-else if (operation == '/')
-{
-    if (num2 != 0)
-    {
-        double quotient = (double)num1 / num2;
-        Console.WriteLine($"{num1} / {num2} is {quotient}");
-    }
-    else
-    {
-        Console.WriteLine("Cannot divide by zero.");
-    }
-}
-else
-{
-    Console.WriteLine("Invalid operation.");
-}
+Bank bank = new Bank(id, name, deposit, withdrawal, balance);
+
+bank.PrintInfo();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//                              practice 4
+
+
+
+//int num1;
+//int num2;
+//char operation;
+
+//Console.WriteLine("Enter first number:");
+//num1 = int.Parse(Console.ReadLine());
+//Console.Clear();
+
+//Console.WriteLine("Enter second number:");
+//num2 = int.Parse(Console.ReadLine());
+//Console.Clear();
+
+//Console.WriteLine("Enter operation (+, -, *, /):");
+//operation = char.Parse(Console.ReadLine());
+//Console.Clear();
+
+//if (operation == '+')
+//{
+//    int sum = num1 + num2;
+//    Console.WriteLine($"{num1} + {num2} is {sum}");
+//}
+//else if (operation == '-')
+//{
+//    int difference = num1 - num2;
+//    Console.WriteLine($"{num1} - {num2} is {difference}");
+//}
+//else if (operation == '*')
+//{
+//    int product = num1 * num2;
+//    Console.WriteLine($"{num1} * {num2} is {product}");
+//}
+//else if (operation == '/')
+//{
+//    if (num2 != 0)
+//    {
+//        double quotient = (double)num1 / num2;
+//        Console.WriteLine($"{num1} / {num2} is {quotient}");
+//    }
+//    else
+//    {
+//        Console.WriteLine("Cannot divide by zero.");
+//    }
+//}
+//else
+//{
+//    Console.WriteLine("Invalid operation.");
+//}
 
 
 
