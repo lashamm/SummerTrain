@@ -8,6 +8,7 @@ decimal deposit;
 decimal withdrawal;
 decimal balance;
 
+
 Console.WriteLine("Enter a starting balance");
 balance = decimal.Parse(Console.ReadLine());
 Console.Clear();
@@ -16,6 +17,7 @@ if (balance < 0)
     Console.WriteLine("Balance cannot be negative.");
     return;
 }
+
 
 Console.WriteLine("Enter your Id:");
 id = int.Parse(Console.ReadLine());
@@ -50,6 +52,8 @@ if (withdrawal < 0)
 
 Bank bank = new Bank(id, name, deposit, withdrawal, balance);
 
+bank.DepositMoney(deposit);
+bank.WithdrawMoney(withdrawal);
 bank.PrintInfo();
 
 
