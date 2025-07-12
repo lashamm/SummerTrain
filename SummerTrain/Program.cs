@@ -1,60 +1,125 @@
-﻿//                               practice 5
-
-using SummerTrain;
-
-int id;
-string name;
-decimal deposit;
-decimal withdrawal;
-decimal balance;
+﻿//                            practice 6
 
 
-Console.WriteLine("Enter a starting balance");
-balance = decimal.Parse(Console.ReadLine());
+string firstName;
+string lastName;
+int age;
+string email;
+string password;
+string confirm;
+
+Console.WriteLine("Enter your firstname");
+firstName = Console.ReadLine();
 Console.Clear();
-if (balance < 0)
+
+Console.WriteLine("Enter your lastname");
+lastName = Console.ReadLine();
+Console.Clear();
+
+Console.WriteLine("Enter your age");
+age = int.Parse(Console.ReadLine());
+Console.Clear();
+if (age < 0 || age > 120)
 {
-    Console.WriteLine("Balance cannot be negative.");
+    Console.WriteLine("Invalid age.");
     return;
 }
 
-
-Console.WriteLine("Enter your Id:");
-id = int.Parse(Console.ReadLine());
+Console.WriteLine("Enter your email");
+email = Console.ReadLine();
 Console.Clear();
-if (id < 0)
+
+Console.WriteLine("Enter your password");
+password = Console.ReadLine();
+Console.Clear();
+
+Console.WriteLine("Confirm your password");
+confirm = Console.ReadLine();
+Console.Clear();
+
+if (password != confirm)
 {
-    Console.WriteLine("Wrong Id.");
+    Console.WriteLine("Passwords do not match.");
     return;
 }
-
-Console.WriteLine("Enter your name:");
-name = Console.ReadLine();
-Console.Clear();
-
-Console.WriteLine("Enter your deposit amount:");
-deposit = decimal.Parse(Console.ReadLine());
-Console.Clear();
-if (deposit < 0)
+else
 {
-    Console.WriteLine("Deposit cannot be negative.");
-    return;
+    Console.WriteLine($"" +
+        $"\nYour fisrtname is {firstName}," +
+        $"\nYour lastname is {lastName}," +
+        $"\nYou are {age} years old," +
+        $"\nYour password is {password}");
 }
 
-Console.WriteLine("Enter your withdrawal amount:");
-withdrawal = decimal.Parse(Console.ReadLine());
-Console.Clear();
-if (withdrawal < 0)
-{
-    Console.WriteLine("Withdrawal cannot be negative.");
-    return;
-}
 
-Bank bank = new Bank(id, name, deposit, withdrawal, balance);
 
-bank.DepositMoney(deposit);
-bank.WithdrawMoney(withdrawal);
-bank.PrintInfo();
+
+
+
+
+
+
+
+
+
+
+////                               practice 5
+
+//using SummerTrain;
+
+//int id;
+//string name;
+//decimal deposit;
+//decimal withdrawal;
+//decimal balance;
+
+
+//Console.WriteLine("Enter a starting balance");
+//balance = decimal.Parse(Console.ReadLine());
+//Console.Clear();
+//if (balance < 0)
+//{
+//    Console.WriteLine("Balance cannot be negative.");
+//    return;
+//}
+
+
+//Console.WriteLine("Enter your Id:");
+//id = int.Parse(Console.ReadLine());
+//Console.Clear();
+//if (id < 0)
+//{
+//    Console.WriteLine("Wrong Id.");
+//    return;
+//}
+
+//Console.WriteLine("Enter your name:");
+//name = Console.ReadLine();
+//Console.Clear();
+
+//Console.WriteLine("Enter your deposit amount:");
+//deposit = decimal.Parse(Console.ReadLine());
+//Console.Clear();
+//if (deposit < 0)
+//{
+//    Console.WriteLine("Deposit cannot be negative.");
+//    return;
+//}
+
+//Console.WriteLine("Enter your withdrawal amount:");
+//withdrawal = decimal.Parse(Console.ReadLine());
+//Console.Clear();
+//if (withdrawal < 0)
+//{
+//    Console.WriteLine("Withdrawal cannot be negative.");
+//    return;
+//}
+
+//Bank bank = new Bank(id, name, deposit, withdrawal, balance);
+
+//bank.DepositMoney(deposit);
+//bank.WithdrawMoney(withdrawal);
+//bank.PrintInfo();
 
 
 
