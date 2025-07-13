@@ -1,55 +1,97 @@
-﻿//                            practice 6
+﻿//                            practice 7
 
+int firstNumber;
+int validationNumber;
 
-string firstName;
-string lastName;
-int age;
-string email;
-string password;
-string confirm;
-
-Console.WriteLine("Enter your firstname");
-firstName = Console.ReadLine();
+Console.WriteLine("Enter a number:");
+firstNumber = int.Parse(Console.ReadLine());
 Console.Clear();
 
-Console.WriteLine("Enter your lastname");
-lastName = Console.ReadLine();
+Console.WriteLine("Enter a validation number:");
+validationNumber = int.Parse(Console.ReadLine());
 Console.Clear();
 
-Console.WriteLine("Enter your age");
-age = int.Parse(Console.ReadLine());
-Console.Clear();
-if (age < 0 || age > 120)
+if (firstNumber < 0 || validationNumber < 0)
 {
-    Console.WriteLine("Invalid age.");
+    Console.WriteLine("Numbers cannot be negative.");
     return;
 }
 
-Console.WriteLine("Enter your email");
-email = Console.ReadLine();
-Console.Clear();
-
-Console.WriteLine("Enter your password");
-password = Console.ReadLine();
-Console.Clear();
-
-Console.WriteLine("Confirm your password");
-confirm = Console.ReadLine();
-Console.Clear();
-
-if (password != confirm)
+else if (firstNumber == validationNumber)
 {
-    Console.WriteLine("Passwords do not match.");
-    return;
+    Console.WriteLine("The numbers are equal.");
+}
+else if (firstNumber > validationNumber)
+{
+    Console.WriteLine($"{firstNumber} is greater than {validationNumber}.");
 }
 else
 {
-    Console.WriteLine($"" +
-        $"\nYour fisrtname is {firstName}," +
-        $"\nYour lastname is {lastName}," +
-        $"\nYou are {age} years old," +
-        $"\nYour password is {password}");
+    Console.WriteLine($"{firstNumber} is less than {validationNumber}.");
 }
+
+
+
+
+
+
+
+
+
+
+
+////                            practice 6
+
+
+//string firstName;
+//string lastName;
+//int age;
+//string email;
+//string password;
+//string confirm;
+
+//Console.WriteLine("Enter your firstname");
+//firstName = Console.ReadLine();
+//Console.Clear();
+
+//Console.WriteLine("Enter your lastname");
+//lastName = Console.ReadLine();
+//Console.Clear();
+
+//Console.WriteLine("Enter your age");
+//age = int.Parse(Console.ReadLine());
+//Console.Clear();
+//if (age < 0 || age > 120)
+//{
+//    Console.WriteLine("Invalid age.");
+//    return;
+//}
+
+//Console.WriteLine("Enter your email");
+//email = Console.ReadLine();
+//Console.Clear();
+
+//Console.WriteLine("Enter your password");
+//password = Console.ReadLine();
+//Console.Clear();
+
+//Console.WriteLine("Confirm your password");
+//confirm = Console.ReadLine();
+//Console.Clear();
+
+//if (password != confirm)
+//{
+//    Console.WriteLine("Passwords do not match.");
+//    return;
+//}
+//else
+//{
+//    Console.WriteLine($"" +
+//        $"\nYour fisrtname is {firstName}," +
+//        $"\nYour lastname is {lastName}," +
+//        $"\nYou are {age} years old," +
+//        $"\nYour password is {password}");
+//}
 
 
 
