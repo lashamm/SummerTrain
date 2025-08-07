@@ -1,34 +1,100 @@
-﻿//                            practice 7
+﻿////                          practice 8
 
-int firstNumber;
-int validationNumber;
 
-Console.WriteLine("Enter a number:");
-firstNumber = int.Parse(Console.ReadLine());
+
+string word;
+int number;
+
+Console.WriteLine("Enter a word number:");
+word = Console.ReadLine();
 Console.Clear();
 
-Console.WriteLine("Enter a validation number:");
-validationNumber = int.Parse(Console.ReadLine());
-Console.Clear();
-
-if (firstNumber < 0 || validationNumber < 0)
+if (word == "one")
 {
-    Console.WriteLine("Numbers cannot be negative.");
-    return;
+        number = 1;
 }
-
-else if (firstNumber == validationNumber)
+else if (word == "two")
 {
-    Console.WriteLine("The numbers are equal.");
+    number = 2;
 }
-else if (firstNumber > validationNumber)
+else if (word == "three")
 {
-    Console.WriteLine($"{firstNumber} is greater than {validationNumber}.");
+    number = 3;
+}
+else if (word == "four")
+{
+    number = 4;
+}
+else if (word == "five")
+{
+    number = 5;
+}
+else if (word == "six")
+{
+    number = 6;
+}
+else if (word == "seven")
+{
+    number = 7;
+}
+else if (word == "eight")
+{
+    number = 8;
+}
+else if (word == "nine")
+{
+    number = 9;
+}
+else if (word == "ten")
+{
+    number = 10;
 }
 else
 {
-    Console.WriteLine($"{firstNumber} is less than {validationNumber}.");
+    Console.WriteLine("Invalid word.");
+    return;
 }
+
+
+
+
+
+
+
+
+
+
+////                            practice 7
+
+//int firstNumber;
+//int validationNumber;
+
+//Console.WriteLine("Enter a number:");
+//firstNumber = int.Parse(Console.ReadLine());
+//Console.Clear();
+
+//Console.WriteLine("Enter a validation number:");
+//validationNumber = int.Parse(Console.ReadLine());
+//Console.Clear();
+
+//if (firstNumber < 0 || validationNumber < 0)
+//{
+//    Console.WriteLine("Numbers cannot be negative.");
+//    return;
+//}
+
+//else if (firstNumber == validationNumber)
+//{
+//    Console.WriteLine("The numbers are equal.");
+//}
+//else if (firstNumber > validationNumber)
+//{
+//    Console.WriteLine($"{firstNumber} is greater than {validationNumber}.");
+//}
+//else
+//{
+//    Console.WriteLine($"{firstNumber} is less than {validationNumber}.");
+//}
 
 
 
