@@ -1,62 +1,49 @@
 ﻿////                          practice 8
 
+string firstName;
+string lastName;
+int age;
+string email;
+string password;
 
-
-string word;
-int number;
-
-Console.WriteLine("Enter a word number:");
-word = Console.ReadLine();
+Console.WriteLine("Enter your first name:");
+firstName = Console.ReadLine();
 Console.Clear();
 
-if (word == "one")
+Console.WriteLine("Enter your last name:");
+lastName = Console.ReadLine();
+Console.Clear();
+
+Console.WriteLine("Enter your age:");
+age = int.Parse(Console.ReadLine());
+Console.Clear();
+
+Console.WriteLine("Enter your Email");
+email = Console.ReadLine();
+Console.Clear();
+
+if (age < 0 || age > 120)
 {
-        number = 1;
+    Console.WriteLine("Invalid age.");
+    return;
 }
-else if (word == "two")
+else if (string.IsNullOrWhiteSpace(firstName) || string.IsNullOrWhiteSpace(lastName) || string.IsNullOrWhiteSpace(email))
 {
-    number = 2;
-}
-else if (word == "three")
-{
-    number = 3;
-}
-else if (word == "four")
-{
-    number = 4;
-}
-else if (word == "five")
-{
-    number = 5;
-}
-else if (word == "six")
-{
-    number = 6;
-}
-else if (word == "seven")
-{
-    number = 7;
-}
-else if (word == "eight")
-{
-    number = 8;
-}
-else if (word == "nine")
-{
-    number = 9;
-}
-else if (word == "ten")
-{
-    number = 10;
-}
-else
-{
-    Console.WriteLine("Invalid word.");
+    Console.WriteLine("First name, last name, and email cannot be empty.");
     return;
 }
 
+else if (!email.Contains("@") || !email.Contains("."))
+{
+    Console.WriteLine("Invalid email format.");
+    return;
+}
 
-
+Console.WriteLine(
+    $"Your name is {firstName}. " +
+    $"\nYour LastName is {lastName}." +
+    $"\nYou are {age} years old. " +
+    $"\nYour email is {email}.");
 
 
 
