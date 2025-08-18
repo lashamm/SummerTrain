@@ -1,49 +1,63 @@
-﻿////                          practice 8
+﻿//////                           practice 9
 
-string firstName;
-string lastName;
-int age;
-string email;
-string password;
 
-Console.WriteLine("Enter your first name:");
-firstName = Console.ReadLine();
-Console.Clear();
 
-Console.WriteLine("Enter your last name:");
-lastName = Console.ReadLine();
-Console.Clear();
+using System;
+using SummerTrain;
 
-Console.WriteLine("Enter your age:");
-age = int.Parse(Console.ReadLine());
-Console.Clear();
 
-Console.WriteLine("Enter your Email");
-email = Console.ReadLine();
-Console.Clear();
+Cars Car = new Cars(1, "Toyota", 150, "Red", 101, "Beginner Class");
 
-if (age < 0 || age > 120)
-{
-    Console.WriteLine("Invalid age.");
-    return;
-}
-else if (string.IsNullOrWhiteSpace(firstName) || string.IsNullOrWhiteSpace(lastName) || string.IsNullOrWhiteSpace(email))
-{
-    Console.WriteLine("First name, last name, and email cannot be empty.");
-    return;
-}
 
-else if (!email.Contains("@") || !email.Contains("."))
-{
-    Console.WriteLine("Invalid email format.");
-    return;
-}
 
-Console.WriteLine(
-    $"Your name is {firstName}. " +
-    $"\nYour LastName is {lastName}." +
-    $"\nYou are {age} years old. " +
-    $"\nYour email is {email}.");
+
+
+//////                          practice 8
+
+//string firstName;
+//string lastName;
+//int age;
+//string email;
+//string password;
+
+//Console.WriteLine("Enter your first name:");
+//firstName = Console.ReadLine();
+//Console.Clear();
+
+//Console.WriteLine("Enter your last name:");
+//lastName = Console.ReadLine();
+//Console.Clear();
+
+//Console.WriteLine("Enter your age:");
+//age = int.Parse(Console.ReadLine());
+//Console.Clear();
+
+//Console.WriteLine("Enter your Email");
+//email = Console.ReadLine();
+//Console.Clear();
+
+//if (age < 0 || age > 120)
+//{
+//    Console.WriteLine("Invalid age.");
+//    return;
+//}
+//else if (string.IsNullOrWhiteSpace(firstName) || string.IsNullOrWhiteSpace(lastName) || string.IsNullOrWhiteSpace(email))
+//{
+//    Console.WriteLine("First name, last name, and email cannot be empty.");
+//    return;
+//}
+
+//else if (!email.Contains("@") || !email.Contains("."))
+//{
+//    Console.WriteLine("Invalid email format.");
+//    return;
+//}
+
+//Console.WriteLine(
+//    $"Your name is {firstName}. " +
+//    $"\nYour LastName is {lastName}." +
+//    $"\nYou are {age} years old. " +
+//    $"\nYour email is {email}.");
 
 
 
