@@ -1,18 +1,18 @@
 ﻿namespace SummerTrain
 {
 
-    internal class cars
+    internal class Cars
     {
-        public int mark { get; set; }
-        public string model { get; set; }
-        public int horsepower { get; set; }
-        public string color { get; set; }
-        public int number { get; set; }
-        public string classRacer { get; set; }
+        public string Mark { get; set; }
+        public string Model { get; set; }
+        public int Horsepower { get; set; }
+        public string Color { get; set; }
+        public int Number { get; set; }
+        public string ClassRacer { get; set; }
 
-        public cars() { }
-        public cars(
-            int mark,
+        public Cars() { }
+        public Cars(
+            string mark,
             string model,
             int horsepower,
             string color,
@@ -20,55 +20,55 @@
             string classRacer
             )
         {
-            this.mark = mark;
-            this.model = model;
-            this.horsepower = horsepower;
-            this.color = color;
-            this.number = number;
-            this.classRacer = classRacer;
+            Mark = mark;
+            Model = model;
+            Horsepower = horsepower;
+            Color = color;
+            Number = number;
+            ClassRacer = classRacer;
         }
 
         public int hpTest()
         {
-            if (horsepower <= 0)
+            if (Horsepower <= 0)
             {
                 throw new ArgumentException("Horsepower must be a positive number.");
             }
             else
             {
-                return horsepower;
+                return Horsepower;
             }
         }
 
         public string classification()
         {
-            if (horsepower <= 0)
+            if (Horsepower <= 0)
             {
                 throw new ArgumentException("Horsepower must be a positive number.");
             }
-            if (horsepower <= 300)
+            if (Horsepower <= 300)
             {
-                classRacer = "Beginner Class";
+                ClassRacer = "Beginner Class";
             }
-            else if (horsepower > 300 || horsepower < 600)
+            else if (Horsepower > 300 && Horsepower < 600)
             {
-                classRacer = "Semi-Pro Class";
+                ClassRacer = "Semi-Pro Class";
             }
-            else if (horsepower >= 600)
+            else if (Horsepower >= 600)
             {
-                classRacer = "Pro Class";
+                ClassRacer = "Pro Class";
             }
-            return classRacer;
+            return ClassRacer;
         }
 
         public void PrintInfo()
         {
             Console.WriteLine(
-                $"Mark: {mark}" +
-                $"\nModel: {model}" +
+                $"Mark: {Mark}" +
+                $"\nModel: {Model}" +
                 $"\nHorsepower: {hpTest()} HP" +
-                $"\nColor: {color}" +
-                $"\nNumber: {number}" +
+                $"\nColor: {Color}" +
+                $"\nNumber: {Number}" +
                 $"\nClass: {classification()}");
         }
     }

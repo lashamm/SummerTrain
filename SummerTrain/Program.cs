@@ -2,12 +2,59 @@
 
 
 
-using System;
 using SummerTrain;
 
 
-Cars Car = new Cars(1, "Toyota", 150, "Red", 101, "Beginner Class");
+string model;
+string mark;
+int horsepower;
+string color;
+int number;
+string classRacer;
 
+
+
+Cars car = new Cars(mark, model, horsepower, color, number, classRacer);
+
+car.PrintInfo();
+
+Console.WriteLine("Enter car Model");
+model = Console.ReadLine();
+Console.Clear();
+
+Console.WriteLine("Enter car Mark");
+mark = Console.ReadLine();
+Console.Clear();
+
+Console.WriteLine("Enter car Horsepower");
+horsepower = int.Parse(Console.ReadLine());
+Console.Clear();
+
+if (horsepower <= 0)
+{
+    Console.WriteLine("Horsepower must be a positive number.");
+    return;
+}
+    else if (horsepower <= 300)
+    {
+        classRacer = "Beginner Class";
+    }
+    else if (horsepower > 300 && horsepower < 600)
+    {
+        classRacer = "Semi-Pro Class";
+    }
+    else
+    {
+        classRacer = "Pro Class";
+}
+
+Console.WriteLine("Enter car Color");
+color = Console.ReadLine();
+Console.Clear();
+
+Console.WriteLine("Enter car Number");
+number = int.Parse(Console.ReadLine());
+Console.Clear();
 
 
 
