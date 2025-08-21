@@ -14,9 +14,7 @@ string classRacer;
 
 
 
-Cars car = new Cars(mark, model, horsepower, color, number, classRacer);
 
-car.PrintInfo();
 
 Console.WriteLine("Enter car Model");
 model = Console.ReadLine();
@@ -55,6 +53,11 @@ Console.Clear();
 Console.WriteLine("Enter car Number");
 number = int.Parse(Console.ReadLine());
 Console.Clear();
+
+
+Cars car = new Cars(mark, model, horsepower, color, number, classRacer);
+
+car.PrintInfo();
 
 
 
